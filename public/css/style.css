@@ -82,7 +82,7 @@ blockquote:after {
   font-size: 50px;
 }
 a {
-  color: #e5ae79;
+  color: #07c9cf;
   -webkit-transition: color 0.5s;
   -moz-transition: color 0.5s;
   -ms-transition: color 0.5s;
@@ -91,7 +91,7 @@ a {
   text-decoration: none;
 }
 a:hover {
-  color: #e4e4e4;
+  color: #eb095f;
 }
 a:focus {
   outline: none;
@@ -102,30 +102,17 @@ pre {
   color: #633332;
   line-height: 1.5em;
 }
-body {
-  background-color: #000000;
-}
 .float {
   float: left;
 }
 .nudge-right {
   margin-right: 8px;
 }
-.white {
-  background-color: #000000;
-}
-.red {
-  background-color: #df4b4e;
-}
-.text-color {
-  font-size: 0.85rem;
-  color: #e5ae79;
-}
-.text-red {
-  color: #df4b4e;
-}
-.text-white {
-  color: rgb(30, 1, 109);
+.text-code {
+  border: 1px solid #999;
+  display: block;
+  padding: 20px;
+  color: #a603e6;
 }
 .wrap {
   margin: 0 auto;

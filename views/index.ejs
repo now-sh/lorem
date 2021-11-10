@@ -11,126 +11,137 @@
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
   <script type="text/javascript" src="/js/jquery-2.0.3.js" defer></script>
   <script type="text/javascript" src="/js/site.js" defer></script>
-  <link rel='stylesheet' href='/css/style.css' />
   <link rel='stylesheet' href='/css/bootstrap.min.css' />
+  <link rel='stylesheet' href='/css/style.css' />
 </head>
 
 <body>
   <div class="container> text-center">
-    <div class="wrap">
-      <div class="block">
-        <div class="title section">
-          <img data-name="title" src="/images/logo.png" alt="LOGO" height="72" width="72">
-          <h3 data-name="title">Metaphorpsum</h3>
-          <p>Click above to generate a random paragraph</p>
-        </div>
-        <p class="text-center">Scroll down to continue reading for more information on usage
-        </p>
-      </div>
-      <div class="block white">
-        <div class="metaphor section">
-          <blockquote>
-            <p class="metaphor-text">
-              <%= sentences %>
-            </p>
-          </blockquote>
-        </div>
-      </div>
-      <div class="block">
-        <div class="generate section clearfix">
-          <h3>Options</h3>
-          <span>
-            Give me <input type="text" class="number" data-name="paragraphs" value="2" maxlength="10" />paragraph(s)
-            <br />
-            containing <input type="text" class="number" data-name="sentences" value="4" maxlength="10" />sentence(s)
-            <br />
-            <select class="p-tags" data-name="p-tags">
-              <option value="0" selected> do not </option>
-              <option value="1"> please </option>
-            </select> wrap them in &lt;p&gt; tags.
-            <button class="button btn-danger" data-name="generate"> Generate </button>
-            <p id="error" class="text-red float">Huh? Numbers please. Above 0.</p>
-          </span>
-        </div>
-      </div>
-      <div class="block red">
-        <div class="usage section">
-          <h3>API Usage</h3>
-          <div class="text-block">
-            <p>Get paragraphs by sending a request to</p>
-            <p><a href="/paragraphs/2">lorem.casjay.coffee/paragraphs/&lt;numberOfParagraphs&gt;</a></p>
-            <p><a
-                href="/paragraphs/2/4">lorem.casjay.coffee/paragraphs/&lt;numberOfParagraphs&gt;/&lt;numberOfSentences&gt;</a>
-            </p>
-            <p>limit: 20 paragraphs / 50 sentences</p>
-          </div>
-          <div class="text-block">
-            <p>Or just grab a few sentences by hitting</p>
-            <p><a href="/sentences/5">lorem.casjay.coffee/sentences/&lt;numberOfSentences&gt;</a></p>
-          </div>
-          <div class="text-block">
-            <p>Add a URL parameter p=true to get each paragraph in &lt;p&gt; tags</p>
-            <p>
-              <a href="/paragraphs/3?p=true">lorem.casjay.coffee/paragraphs/3?p=true</a>
+    <div class="">
+      <div class="wrap ">
+        <div class="kbd">
+          <div class="title section">
+            <img data-name="title" src="/images/logo.png" alt="LOGO" height="72" width="72">
+            <h3 data-name="title">Metaphorpsum</h3>
+            <p>Click above to generate a random paragraph</p>
+            <p class="text-center">
+              Scroll down to continue reading for more information on usage
+              <br />
             </p>
           </div>
-          <div class="text-block">
-            <p>Add a URL parameter format=json to get json formatted data </p>
-            <p>
-              <a href="/sentences/1?format=json"> lorem.casjay.coffee/sentences/1?format=json </a><br />
-              <a href="/paragraphs/1?format=json"> lorem.casjay.coffee/paragraphs/1?format=json </a>
-            </p>
-          </div>
-          <div class="text-block">
-            <p>Using Windows with powershell? Try this in the command line:</p>
-            <p class="text-color">
-              pwsh -Command Invoke-RestMethod -Uri https://lorem-casjay.vercel.app/paragraphs/2 -Method Get
-            </p>
-          </div>
-          <div class="text-block">
-            <p>
-              Using OS X or Linux? Try this in the command line:
-            </p>
-            <p class="text-color">curl -q -LSs http://lorem.casjay.coffee/sentences/3</p>
-          </div>
-          <div class="text-block clearfix">
-            <p>
-              And here’s a nifty MacOS bash script that copies metaphorpsum straight to your clipboard
-            </p>
-            <p class="text-color">
-              function lorem() { curl -q -LSs http://lorem.casjay.coffee/sentences/${@:-5} | pbcopy ;}
-            </p>
-            <p>
-              And here’s a nifty Linux bash script that copies metaphorpsum straight to your clipboard
-            </p>
-            <p class="text-color">
-              function lorem() { curl -q -LSs http://lorem.casjay.coffee/sentences/${@:-5} | xclip -selection clipboard
-              ;}
-            </p>
-            <p>
-              usage: <span class=" text-color">lorem 10</span>
-            </p>
-          </div>
-          <div class="text-block">
-            <p>
-              Using <a href="http://www.alfredapp.com/">Alfred</a>? There's a workflow for that.</p>
-            <p>
-              <a href="https://github.com/ColeTownsend/metaphor-ipsum-workflow">https://github.com/ColeTownsend/metaphor-ipsum-workflow
-              </a>
-            </p>
+          <div class="blockquote vh-100">
+            <div class="metaphor section">
+              <blockquote>
+                <p class="metaphor-text">
+                  <%= sentences %>
+                </p>
+              </blockquote>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="block">
-        <div class="credits section section--short">
-          <p>Built by <a href="http://kylestetz.com">Kyle Stetz</a> and maintained by
-            <a href="http://casjay.info">Jason Hempstead</a>
-            <br />Get the source code on <a href="https://github.com/now-sh/lorem">GitHub</a>.
-          </p>
+        <div class="blockquote bg-primary text-light">
+          <div class="generate section clearfix vh-100">
+            <h3>Options</h3>
+            <span>
+              Give me <input type="text" class="number" data-name="paragraphs" value="2" maxlength="10" />paragraph(s)
+              <br />
+              containing <input type="text" class="number" data-name="sentences" value="4" maxlength="10" />sentence(s)
+              <br />
+              <select class="p-tags" data-name="p-tags">
+                <option value="0" selected> do not </option>
+                <option value="1"> please </option>
+              </select> wrap them in &lt;p&gt; tags.<br />
+              <button class="button btn-danger" data-name="generate"> Generate </button>
+              <p id="error" class="text-danger float">Huh? Numbers please. Above 0.</p>
+            </span>
+          </div>
+        </div>
+        <div class="text-danger">
+          <div class="usage">
+            <h1>API Usage</h1>
+            <div class="text-block bg-gradient-info">
+              <p>Get paragraphs by sending a request to</p>
+              <p><a href="/paragraphs/2">lorem.casjay.coffee/paragraphs/&lt;numberOfParagraphs&gt;</a></p>
+              <p><a
+                  href="/paragraphs/2/4">lorem.casjay.coffee/paragraphs/&lt;numberOfParagraphs&gt;/&lt;numberOfSentences&gt;</a>
+              </p>
+              <p>limit: 20 paragraphs / 50 sentences</p>
+            </div>
+            <div class="text-block">
+              <p>Or just grab a few sentences by hitting</p>
+              <p><a href="/sentences/5">lorem.casjay.coffee/sentences/&lt;numberOfSentences&gt;</a></p>
+            </div>
+            <div class="text-block">
+              <p>Add a URL parameter p=true to get each paragraph in &lt;p&gt; tags</p>
+              <p>
+                <a href="/paragraphs/3?p=true">lorem.casjay.coffee/paragraphs/3?p=true</a>
+              </p>
+            </div>
+            <div class="text-block">
+              <p>Add a URL parameter format=json to get json formatted data </p>
+              <p>
+                <a href="/sentences/1?format=json"> lorem.casjay.coffee/sentences/1?format=json </a><br />
+                <a href="/paragraphs/1?format=json"> lorem.casjay.coffee/paragraphs/1?format=json </a>
+              </p>
+            </div>
+            <div class="text-block">
+              <p>Using Windows with powershell? Try this in the command line:</p>
+              <p class="text-code">
+                pwsh -Command Invoke-RestMethod -Uri https://lorem-casjay.vercel.app/paragraphs/2 -Method Get
+              </p>
+            </div>
+            <div class="text-block">
+              <p>
+                Using OS X or Linux? Try this in the command line:
+              </p>
+              <p class="text-code">curl -q -LSs http://lorem.casjay.coffee/sentences/3</p>
+            </div>
+            <div class="text-block clearfix">
+              <p>
+                And here’s a nifty MacOS bash script that copies metaphorpsum straight to your clipboard
+              </p>
+              <p class="text-code">
+                function lorem() { curl -q -LSs http://lorem.casjay.coffee/sentences/${@:-5} | pbcopy ;}
+              </p>
+              <p>
+                And here’s a nifty Linux bash script that copies metaphorpsum straight to your clipboard
+              </p>
+              <p class="text-code">
+                function lorem() { curl -q -LSs http://lorem.casjay.coffee/sentences/${@:-5} | xclip -selection
+                clipboard
+                ;}
+              </p>
+              <p>
+                usage: <span class=" text-code">lorem 10</span>
+              </p>
+            </div>
+            <div class="text-block">
+              <p>
+                Using <a href="http://www.alfredapp.com/">Alfred</a>? There's a workflow for that.</p>
+              <p>
+                <a href="https://github.com/ColeTownsend/metaphor-ipsum-workflow">https://github.com/ColeTownsend/metaphor-ipsum-workflow
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="block bg-dark text-center text-white">
+          <div class="credits section section--short">
+            <p>Built by <a href="http://kylestetz.com" target="_blank">Kyle Stetz</a> and Modified by
+              <a href="http://casjay.info" target="_blank">Jason Hempstead</a>
+              <br />Get the source code on <a href="https://github.com/now-sh/lorem">GitHub</a>.
+              <br />
+            <h6>
+              <span> Copyright © 2021
+                <a href="http://casjay.info" class="text-danger" target="_blank">Jason Hempstead</a>,
+                <a href="http://casjaysdev.com" class="text-primary" target="_blank">Casjays Developments</a>
+              </span>
+            </h6>
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 </body>
 
 </html>
