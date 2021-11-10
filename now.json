@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "*.js",
+      "use": "@now/node"
+    }
+  ],
+  "routes": [
+    {
+      "methods": ["POST", "OPTIONS", "GET"],
+      "headers": {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "*",
+        "Access-Control-Allow-Credentials": "true"
+      },
+      "src": "^/(.*)$",
+      "dest": "app.js"
+    }
+  ]
+}
