@@ -20,7 +20,7 @@
     <div class="">
       <div class="wrap ">
         <div class="kbd">
-          <div class="title section">
+          <div class="title section vh-100">
             <img data-name="title" src="/images/logo.png" alt="LOGO" height="72" width="72">
             <h3 data-name="title">Metaphorpsum</h3>
             <p>Click above to generate a random paragraph</p>
@@ -28,15 +28,11 @@
               Scroll down to continue reading for more information on usage
               <br />
             </p>
-          </div>
-          <div class="blockquote vh-100">
-            <div class="metaphor section">
-              <blockquote>
-                <p class="metaphor-text">
-                  <%= sentences %>
-                </p>
-              </blockquote>
-            </div>
+            <blockquote class="metaphor section ">
+              <p class="metaphor-text">
+                <%= sentences %>
+              </p>
+            </blockquote>
           </div>
         </div>
         <div class="blockquote bg-primary text-light">
@@ -60,12 +56,12 @@
           <div class="usage">
             <h1>API Usage</h1>
             <div class="text-block bg-gradient-info">
+              <p>limit: 20 paragraphs / 50 sentences</p>
               <p>Get paragraphs by sending a request to</p>
               <p><a href="/paragraphs/2">lorem.casjay.coffee/paragraphs/&lt;numberOfParagraphs&gt;</a></p>
               <p><a
                   href="/paragraphs/2/4">lorem.casjay.coffee/paragraphs/&lt;numberOfParagraphs&gt;/&lt;numberOfSentences&gt;</a>
               </p>
-              <p>limit: 20 paragraphs / 50 sentences</p>
             </div>
             <div class="text-block">
               <p>Or just grab a few sentences by hitting</p>
