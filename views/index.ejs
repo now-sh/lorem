@@ -39,14 +39,18 @@
       <div class="block">
         <div class="generate section clearfix">
           <h3>Options</h3>
-          <p>Give me <input type="text" class="number" data-name="paragraphs" value="2" maxlength="2" /> paragraph(s)
-            containing <input type="text" class="number" data-name="sentences" value="4" maxlength="2" /> sentence(s)
-            each; <select class="p-tags" data-name="p-tags">
-              <option value="0" selected>do not</option>
-              <option value="1">please</option>
-            </select> wrap them in &lt;p&gt; tags.</p>
-          <button class="button float" data-name="generate">Generate</button>
-          <p id="error" class="text-red float">Huh? Numbers please. Above 0.</p>
+          <span>
+            Give me <input type="text" class="number" data-name="paragraphs" value="2" maxlength="10" />paragraph(s)
+            <br />
+            containing <input type="text" class="number" data-name="sentences" value="4" maxlength="10" />sentence(s)
+            <br />
+            <select class="p-tags" data-name="p-tags">
+              <option value="0" selected> do not </option>
+              <option value="1"> please </option>
+            </select> wrap them in &lt;p&gt; tags.
+            <button class="button btn-danger" data-name="generate"> Generate </button>
+            <p id="error" class="text-red float">Huh? Numbers please. Above 0.</p>
+          </span>
         </div>
       </div>
       <div class="block red">
