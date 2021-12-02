@@ -1,25 +1,20 @@
-// -----------------------------------------------
-//   LOREM METAPHORPSUM: a generator of metaphor
-// -----------------------------------------------
-// created by Kyle Stetz -> kylestetz@gmail.com
-// and released under the MIT license.
-// -----------------------------------------------
+const express = require('express');
+const http = require('http');
+const path = require('path');
+const cors = require('cors');
 
-var express = require('express'),
-  routes = require('./routes'),
-  indexRoutes = require('./routes/index'),
-  http = require('http'),
-  path = require('path'),
-  cors = require('cors');
+const routes = require('./routes');
+const indexRoutes = require('./routes/index');
 
-var app = express();
+const app = express();
 
 // all environments
 app.set('port', process.env.PORT || 3000);
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
-app.use(express.favicon('public/favicon.ico'));
-// you'll want to uncomment this if you're developing locally.
+
+app.use(express.favicon('./public/favicon.ico'));
+
 // app.use(express.logger('dev'));
 app.use(cors());
 app.use(express.bodyParser());
@@ -27,10 +22,10 @@ app.use(express.methodOverride());
 app.use(express.cookieParser('metaphorpsum'));
 app.use(express.session());
 app.use(app.router);
-app.use(require('less-middleware')(path.join(__dirname, 'public')));
-app.use(express.static(path.join(__dirname, 'public')));
 
-// development only
+app.use(express.static(__dirname + '/public'));
+app.use(require('less-middleware')(path.join(__dirname, '/public')));
+
 if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
