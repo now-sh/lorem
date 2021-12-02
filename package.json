@@ -1,6 +1,7 @@
 {
   "name": "metaphorpsum",
   "version": "0.0.2",
+  "main": "app.js",
   "scripts": {
     "start": "node app.js",
     "dev": "nodemon app.js",
@@ -15,7 +16,6 @@
     "randy": "1.5.1",
     "sentencer": "*"
   },
-  "main": "app.js",
   "devDependencies": {
     "nodemon": "^2.0.15"
   }
