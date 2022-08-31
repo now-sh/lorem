@@ -1,8 +1,11 @@
 <h1 align=center>👋Welcome to the metaphorpsum project 👋</h1>
 <p align=center>
 
-a simple lorem ipsum generator with an api for use with curl  
-curl <http://lorem.casjay.coffee/sentences/3>  
+A simple lorem ipsum generator with an api for use with curl  
+
+```shell
+curl -q -LSsf http://lorem.casjay.coffee/sentences/3  
+```
 
 Mac Sentences:
 
