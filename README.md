@@ -10,25 +10,25 @@ curl -q -LSsf http://lorem.casjay.coffee/sentences/3
 Mac Sentences:
 
 ```shell
-function lorem_s() { curl -q -LSs https://lorum.casjay.vercel.app/sentences/${@:-1} | pbcopy ;}
+function lorem_s() { curl -q -LSs https://lorum.casjay.coffee/sentences/${@:-1} | pbcopy ;}
 ```
 
 Mac Paragraphs:
 
 ```shell
-function lorem_p() { curl -q -LSs https://lorum.casjay.vercel.app/paragraphs/${@:-1} | pbcopy ;}
+function lorem_p() { curl -q -LSs https://lorum.casjay.coffee/paragraphs/${@:-1} | pbcopy ;}
 ```
 
 Linux Sentences:
 
 ```shell
-function lorem_s() { curl -q -LSs https://lorum.casjay.vercel.app/sentences/${@:-1} | xclip -selection clipboard ;}
+function lorem_s() { curl -q -LSs https://lorum.casjay.coffee/sentences/${@:-1} | xclip -selection clipboard ;}
 ```
 
 Linux Paragraphs:
 
 ```shell
-function lorem_p() { curl -q -LSs https://lorum.casjay.vercel.app/paragraphs/${@:-1} | xclip -selection clipboard ;}
+function lorem_p() { curl -q -LSs https://lorum.casjay.coffee/paragraphs/${@:-1} | xclip -selection clipboard ;}
 ```
 
 ---
